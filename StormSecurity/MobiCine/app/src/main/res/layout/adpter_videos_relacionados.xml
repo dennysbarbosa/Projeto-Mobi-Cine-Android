@@ -1,0 +1,30 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|center_vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/linearVideosRelacionados"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/txtAssistido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Assistido"
+            android:layout_marginLeft="10dp"
+            style="@style/AppThemeCustomizadoBlack"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:textColor="#FF000000" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

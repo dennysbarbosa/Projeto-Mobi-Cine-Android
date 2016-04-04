@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Inf do Sistema -->
+    <string name="app_name">MobiCine</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Inf ao Usuario -->
+    <string name="lbCarregando">Carregando...</string>
+    <string name="telaIncial">Tela Incial</string>
+    <string name="falhaCargaInicial">Falha ao realizar a carga de dados.</string>
+    <string name="videosAssociados">Videos Relacionados</string>
+    <string name="videosFavoritos">Videos Favoritos</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="favoritosAdicionado">Video Adicionado com sucesso.</string>
+    <string name="favoritosListaVazia">Não existe video marcado como favorito.</string>
+
+    <string name="falhaExisteCampoVazio">Existe campo em branco.</string>
+    <string name="falhaProcessarCargaPreLiminar">Falha ao processar carga inicial.</string>
+    <string name="falhaRespostaServidor">Não existe resposta do servidor.</string>
+
+    <!-- string da blibioteca -->
+
+    <string name="title_activity_video_player">ExoMedia Video Player</string>
+    <string name="title_activity_audio_player">ExoMedia Audio Player</string>
+    <string name="title_audio_selection_activity">Audio selection</string>
+    <string name="title_video_selection_activity">Seleção de Video</string>
+
+    <!-- redes sociais ids-->
+
+    <string name="facebook_app_id">1014932091923561</string>
+
+</resources>

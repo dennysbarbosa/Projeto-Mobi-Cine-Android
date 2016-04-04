@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText,ScrollViewSize" >
+
+    <LinearLayout
+        android:id="@+id/linearTitulo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorWhite"
+        android:layout_alignParentEnd="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Titulo"
+            style="@style/AppThemeCustomizadoBlackSmall"
+            android:id="@+id/txtTituloOpacaoUser"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayouFrame1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/linearTitulo" >
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/btnPlay"
+            android:background="@drawable/play"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/linearCompartilhamento"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnPlay"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                style="?android:attr/buttonStyleSmall"
+                android:background="@drawable/compartilhar"
+                android:id="@+id/btnCompartilhar"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="left" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                style="?android:attr/buttonStyleSmall"
+                android:background="@drawable/favorito"
+                android:id="@+id/btnFavorito"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="left" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCompartilhamentoOpcoes"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/horizline"
+            android:layout_below="@+id/linearCompartilhamento"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/facebook"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btnFacebookOpcaoUser"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/twitter"
+                android:visibility="gone"
+                android:id="@+id/btnTwitterOpcaoUser"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Mais Informações"
+                android:id="@+id/btnMaisInf"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

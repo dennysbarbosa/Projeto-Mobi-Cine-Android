@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devbrackets.android.exomedia.test" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.devbrackets.android.exomedia.test"
+        android:targetPackage="com.devbrackets.android.exomedia.test" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+
+        <receiver
+            android:name="com.devbrackets.android.exomedia.receiver.MediaControlsReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
