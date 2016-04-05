@@ -1,9 +1,11 @@
 package br.com.stormsecurity.mobicine.presentation.fragment;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -23,16 +25,25 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.Callback;
+import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterException;
+import com.twitter.sdk.android.core.TwitterSession;
+import com.twitter.sdk.android.core.identity.TwitterAuthClient;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
+import br.com.stormsecurity.mobicine.constantes.RedesSociais;
 import br.com.stormsecurity.mobicine.domain.OpcaoUsuario;
 import br.com.stormsecurity.mobicine.domain.VideoItem;
 import br.com.stormsecurity.mobicine.helper.AppHelper;
 import br.com.stormsecurity.mobicine.presentation.R;
+import io.fabric.sdk.android.Fabric;
 
 
 public class Fragment1 extends Fragment {
@@ -56,7 +67,9 @@ public class Fragment1 extends Fragment {
     private CallbackManager callbackManager;
     private ShareDialog shareDialog;
     private SharedPreferences pref;
-    SharedPreferences.Editor editor;
+    private SharedPreferences.Editor editor;
+    private Callback<TwitterSession> callbackTwitter;
+    private TwitterAuthClient clientTwitter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -95,9 +108,12 @@ public class Fragment1 extends Fragment {
         }
         AppHelper.getInstance().setFragment1(this);
         opcaoUsuario = AppHelper.getInstance().getOpcaoUsuario();
+        callbackManager = CallbackManager.Factory.create();
+        configuracaoTwitter();
 
     }
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -156,6 +172,13 @@ public class Fragment1 extends Fragment {
             }
         });
 
+        btnTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onTwitterLogin();
+            }
+        });
+
         return rootView;
     }
 
@@ -187,7 +210,7 @@ public class Fragment1 extends Fragment {
         SharedPreferences sharedPreferences = AppHelper.getInstance().getMainActivityUI().getSharedPreferences("lista_de_favoritos_key", 0);
         Set<String> listIdFavoritos = sharedPreferences.getStringSet("lista_de_favoritos_key", null);
 
-        return new ArrayList<>(listIdFavoritos);
+        return listIdFavoritos != null ?new ArrayList<>(listIdFavoritos) : null;
     }
 
     public void createListaDeFavoritos(){
@@ -255,6 +278,9 @@ public class Fragment1 extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(clientTwitter!=null){
+            clientTwitter.onActivityResult(requestCode, resultCode, data);
+        }
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -293,6 +319,30 @@ public class Fragment1 extends Fragment {
 
         this.loginManager.logInWithReadPermissions(this, Arrays.asList("user_friends", "email"));
     }
+    public void configuracaoTwitter() {
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(RedesSociais.TWITTER_KEY, RedesSociais.TWITTER_SECRET);
+        Fabric.with(AppHelper.getInstance().getMainActivityUI(), new Twitter(authConfig));
+    }
+
+    public void onTwitterLogin() {
+
+        callbackTwitter = new Callback<TwitterSession>() {
+            @Override
+            public void success(Result<TwitterSession> result) {
+                TwitterSession session = result.data;
+                //codigo para compartilhamento...
+            }
+
+            @Override
+            public void failure(TwitterException exception) {
+                Log.e("Twitter", exception.getMessage());
+            }
+        };
+
+        clientTwitter = new TwitterAuthClient();
+        clientTwitter.authorize(AppHelper.getInstance().getMainActivityUI(), callbackTwitter);
+    }
+
 
 
 }

@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\exomedia_notification_content.xml",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\bundles\\debug\\res\\layout-v11\\exomedia_notification_content.xml"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\exomedia_notification_content.xml",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\bundles\\debug\\res\\layout-v11\\exomedia_notification_content.xml"
     }
 ]

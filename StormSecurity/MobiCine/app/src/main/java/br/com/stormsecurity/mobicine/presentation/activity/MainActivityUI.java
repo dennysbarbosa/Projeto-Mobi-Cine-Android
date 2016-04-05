@@ -11,7 +11,11 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.stormsecurity.mobicine.domain.OpcaoUsuario;
+import br.com.stormsecurity.mobicine.domain.VideoItem;
 import br.com.stormsecurity.mobicine.helper.AppHelper;
 import br.com.stormsecurity.mobicine.presentation.R;
 import br.com.stormsecurity.mobicine.presentation.adapter.FavoritoAdapter;
@@ -27,6 +31,7 @@ public class MainActivityUI extends AbstractActivity implements Fragment1.OnFrag
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_ui);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         AppHelper.getInstance().setMainActivityUI(this);
         AppHelper.getInstance().getFragment2().montarAdpter();
         AppHelper.getInstance().getFragment1().configuracaoFacebook();
@@ -68,18 +73,19 @@ public class MainActivityUI extends AbstractActivity implements Fragment1.OnFrag
     }
 
     public void showFavoritos() {
-
-        if(!AppHelper.getInstance().getVideoItemListFavoritos().isEmpty()) {
+        final List<VideoItem> listFavoritos = AppHelper.getInstance().getVideoItemListFavoritos();
+        if(listFavoritos != null && !AppHelper.getInstance().getVideoItemListFavoritos().isEmpty()) {
             final Dialog dialog = processarDialog(getString(R.string.videosFavoritos));
             ListView lvFavoritos = (ListView) dialog.findViewById(R.id.lvConteudo);
             FavoritoAdapter favoritoAdapter = new FavoritoAdapter(getApplicationContext(),
-                    AppHelper.getInstance().getVideoItemListFavoritos());
+                    listFavoritos);
             lvFavoritos.setAdapter(favoritoAdapter);
             lvFavoritos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                 public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
                                         long arg3) {
-                    executarVideo(pos);
+                    executarVideo(listFavoritos.get(pos),listItensFavoritados(listFavoritos.get(pos)), pos);
+                    AppHelper.getInstance().setEentoVideosfavoritos(true);
                     dialog.hide();
                 }
             });
@@ -90,8 +96,19 @@ public class MainActivityUI extends AbstractActivity implements Fragment1.OnFrag
         }
     }
 
-    public void executarVideo(int pos){
-        createOpacaoUsuario(AppHelper.getInstance().getVideoItemListFavoritos().get(pos), pos);
+    private List<VideoItem> listItensFavoritados(VideoItem item){
+
+        List<VideoItem> listItensFavoritados = new ArrayList<>();
+        for(VideoItem videoItem : AppHelper.getInstance().getVideoItemListFavoritos()){
+            if(videoItem.getId() == item.getId()){
+                listItensFavoritados.add(videoItem);
+            }
+        }
+        return listItensFavoritados;
+    }
+
+    public void executarVideo(VideoItem videoItem, List<VideoItem> videoItemList, int posicao){
+        createOpacaoUsuario(videoItem, videoItemList, posicao);
         startVideoPlayerActivity();
     }
 

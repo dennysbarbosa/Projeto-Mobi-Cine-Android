@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import br.com.stormsecurity.mobicine.domain.InfUsuario;
 import br.com.stormsecurity.mobicine.domain.OpcaoUsuario;
 import br.com.stormsecurity.mobicine.domain.VideoItem;
 import br.com.stormsecurity.mobicine.presentation.activity.MainActivityUI;
@@ -27,6 +28,9 @@ public class AppHelper {
     private List<VideoItem> videoItemListFavoritos;
     private OpcaoUsuario opcaoUsuario;
     private Set<String> listFavoritos;
+    private boolean eventoVideosRelacionados;
+    private boolean eentoVideosfavoritos;
+    private List<InfUsuario> listInfUsuario;
 
     public AppHelper() {
     }
@@ -36,6 +40,30 @@ public class AppHelper {
             instance = new AppHelper();
         }
         return instance;
+    }
+
+    public List<InfUsuario> getListInfUsuario() {
+        return listInfUsuario;
+    }
+
+    public void setListInfUsuario(List<InfUsuario> listInfUsuario) {
+        this.listInfUsuario = listInfUsuario;
+    }
+
+    public boolean isEventoVideosRelacionados() {
+        return eventoVideosRelacionados;
+    }
+
+    public void setEventoVideosRelacionados(boolean eventoVideosRelacionados) {
+        this.eventoVideosRelacionados = eventoVideosRelacionados;
+    }
+
+    public boolean isEentoVideosfavoritos() {
+        return eentoVideosfavoritos;
+    }
+
+    public void setEentoVideosfavoritos(boolean eentoVideosfavoritos) {
+        this.eentoVideosfavoritos = eentoVideosfavoritos;
     }
 
     public Set<String> getListIdFavoritos() {

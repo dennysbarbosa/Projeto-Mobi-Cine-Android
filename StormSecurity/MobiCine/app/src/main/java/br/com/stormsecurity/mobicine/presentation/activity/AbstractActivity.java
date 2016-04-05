@@ -134,7 +134,8 @@ public class AbstractActivity extends AppCompatActivity {
         this.opcaoUsuario = opcaoUsuario;
         AppHelper.getInstance().setOpcaoUsuario(opcaoUsuario);
     }
-    public void createOpacaoUsuario(VideoItem videoOpcaoItem, int pos){
-        setOpcaoUsuario(new OpcaoUsuario(videoOpcaoItem, AppHelper.getInstance().getVideoItemList(), pos));
-    }
+
+      public void createOpacaoUsuario(VideoItem videoOpcaoItem,List<VideoItem> listVideosIntes, int pos) {
+          setOpcaoUsuario(new OpcaoUsuario(videoOpcaoItem, listVideosIntes, pos));
+      }
 }

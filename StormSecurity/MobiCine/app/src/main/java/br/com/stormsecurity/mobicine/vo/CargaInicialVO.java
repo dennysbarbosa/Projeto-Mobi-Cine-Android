@@ -35,6 +35,9 @@ public class CargaInicialVO {
     }
 
     public List<InfUsuario> getListInfUsuario() {
+        if (listInfUsuario == null){
+            listInfUsuario = getListInfUsuario();
+        }
         return listInfUsuario;
     }
 

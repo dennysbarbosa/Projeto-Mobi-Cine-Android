@@ -1,7 +1,6 @@
 package br.com.stormsecurity.mobicine.service;
 
 import android.app.PendingIntent;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -16,7 +15,6 @@ import br.com.stormsecurity.mobicine.App;
 import br.com.stormsecurity.mobicine.data.MediaItem;
 import br.com.stormsecurity.mobicine.manager.PlaylistManager;
 import br.com.stormsecurity.mobicine.presentation.R;
-import br.com.stormsecurity.mobicine.presentation.activity.StartupActivity;
 
 /**
  * A simple service that extends {@link EMPlaylistService} in order to provide
@@ -60,8 +58,9 @@ public class AudioService extends EMPlaylistService<MediaItem, PlaylistManager> 
 
     @Override
     protected PendingIntent getNotificationClickPendingIntent() {
-        Intent intent = new Intent(getApplicationContext(), StartupActivity.class);
-        return PendingIntent.getActivity(getApplicationContext(), FOREGROUND_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        //Intent intent = new Intent(getApplicationContext(), StartupActivity.class);
+        //return PendingIntent.getActivity(getApplicationContext(), FOREGROUND_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return null;
     }
 
     @Override

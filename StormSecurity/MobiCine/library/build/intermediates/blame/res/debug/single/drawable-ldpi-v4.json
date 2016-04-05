@@ -1,27 +1,55 @@
 [
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_black.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_black.png"
-    },
-    {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_play_arrow_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_play_arrow_white.png"
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_next_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_next_black.png"
     },
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_fast_forward_white.png",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_fast_forward_white.png"
     },
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_next_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_next_white.png"
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_previous_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_previous_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_black.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_next_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_next_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_play_arrow_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_play_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_fast_forward_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_fast_forward_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_clear_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_clear_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_black.png"
     },
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_next_black.png",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_next_black.png"
     },
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_pause_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_pause_white.png"
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_next_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_next_white.png"
     },
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_play_arrow_black.png",
@@ -32,27 +60,55 @@
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_previous_black.png"
     },
     {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_play_arrow_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_play_arrow_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_rewind_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_rewind_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_fast_forward_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_fast_forward_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_play_arrow_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_play_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_clear_black.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_clear_black.png"
+    },
+    {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_rewind_black.png",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_rewind_black.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_rewind_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_rewind_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_previous_white.png",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_previous_white.png"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_previous_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_previous_white.png"
     },
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_fast_forward_black.png",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_fast_forward_black.png"
     },
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_clear_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_clear_white.png"
-    },
-    {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_clear_black.png",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_clear_black.png"
     },
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_rewind_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_rewind_white.png"
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_clear_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_clear_white.png"
     },
     {
-        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_skip_previous_white.png",
-        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_skip_previous_white.png"
+        "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\exomedia_ic_rewind_white.png",
+        "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\exomedia_ic_rewind_white.png"
     }
 ]

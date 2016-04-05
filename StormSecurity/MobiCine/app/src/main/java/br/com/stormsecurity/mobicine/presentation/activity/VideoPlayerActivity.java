@@ -94,7 +94,17 @@ public class VideoPlayerActivity extends Activity implements MediaPlayer.OnPrepa
         playlistManager = App.getPlaylistManager();
 
         List<MediaItem> mediaItems = new LinkedList<>();
-        for (VideoItem item : AppHelper.getInstance().getVideoItemList()) {
+        List<VideoItem> videoItemList = null;
+
+        if(AppHelper.getInstance().isEventoVideosRelacionados() || AppHelper.getInstance().isEentoVideosfavoritos()){
+            videoItemList = AppHelper.getInstance().getOpcaoUsuario().getListItensRelacionados();
+        }else{
+            videoItemList = AppHelper.getInstance().getVideoItemList();
+        }
+        AppHelper.getInstance().setEentoVideosfavoritos(false);
+        AppHelper.getInstance().setEventoVideosRelacionados(false);
+
+        for (VideoItem item : videoItemList) {
             MediaItem mediaItem = new MediaItem(item);
             mediaItems.add(mediaItem);
         }

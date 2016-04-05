@@ -12,12 +12,20 @@ import com.google.inject.Inject;
 import br.com.stormsecurity.mobicine.presentation.R;
 import br.com.stormsecurity.mobicine.service.CargaInicialService;
 import br.com.stormsecurity.mobicine.service.impl.CargaInicialServiceImpl;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 
 
 /**
  * Created by Dennys on 28/03/2016.
  */
 public class SplashScreenUI extends Activity implements Runnable{
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "2nfuKqADxUaZHUb7vI6ZtvgSM";
+    private static final String TWITTER_SECRET = "pA3zLqXHVZrY5fnv1VsaggBKcz1bTG6txqBk0l2IiX5YfU9WBw";
+
 
     @Inject
     private CargaInicialService cargaInicialService;
@@ -27,6 +35,8 @@ public class SplashScreenUI extends Activity implements Runnable{
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.ui_splash);
         cargaInicialService = new CargaInicialServiceImpl();
         tempoDeVisualizacao();

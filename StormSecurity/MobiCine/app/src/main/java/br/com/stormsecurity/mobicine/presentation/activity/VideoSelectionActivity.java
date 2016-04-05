@@ -21,35 +21,36 @@ import br.com.stormsecurity.mobicine.presentation.adapter.VideoSelectionListAdap
  * A simple activity that allows the user to select a
  * video to play
  */
-public class VideoSelectionActivity extends AbstractActivity implements AdapterView.OnItemClickListener , SearchView.OnQueryTextListener{
+public class VideoSelectionActivity extends AbstractActivity implements AdapterView.OnItemClickListener, SearchView.OnQueryTextListener{
 
     private List<VideoItem> videoItemList;
-    private ListView exampleList;
+    private ListView ltViewVideos;
     private VideoItem videoOpcaoItem;
+    private VideoSelectionListAdapter videoSelectionListAdapter;
+    SearchView mSearchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_selection_activity);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(getResources().getString(R.string.title_video_selection_activity));
-        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        exampleList = (ListView) findViewById(R.id.selection_activity_list);
+        ltViewVideos = (ListView) findViewById(R.id.selection_activity_list);
         videoItemList = AppHelper.getInstance().getVideoItemList();
-        exampleList.setAdapter(new VideoSelectionListAdapter(this, videoItemList));
-        exampleList.setOnItemClickListener(this);
+        videoSelectionListAdapter = new VideoSelectionListAdapter(this, videoItemList);
+        ltViewVideos.setAdapter(videoSelectionListAdapter);
+        ltViewVideos.setOnItemClickListener(this);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        videoOpcaoItem =  videoItemList.get(position);
-        createOpacaoUsuario(videoOpcaoItem,position);
+        videoOpcaoItem = videoItemList.get(position);
+        createOpacaoUsuario(videoOpcaoItem, AppHelper.getInstance().getVideoItemList(), position);
         startMainActivityUI();
     }
 
-    private void startMainActivityUI(){
+    private void startMainActivityUI() {
         Intent intent = new Intent(this, MainActivityUI.class);
         startActivity(intent);
     }
@@ -59,7 +60,7 @@ public class VideoSelectionActivity extends AbstractActivity implements AdapterV
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_selecao_video, menu);
 
-        SearchView mSearchView = (SearchView) menu.findItem(R.id.action_search)
+        mSearchView = (SearchView) menu.findItem(R.id.action_search)
                 .getActionView();
         //Define um texto de ajuda:
         mSearchView.setQueryHint("Digite o filme desejado");
@@ -84,14 +85,18 @@ public class VideoSelectionActivity extends AbstractActivity implements AdapterV
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+
+
+        @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
     }
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        return false;
+
+        videoSelectionListAdapter.getFilter().filter(newText.toString());
+        return true;
     }
 
 

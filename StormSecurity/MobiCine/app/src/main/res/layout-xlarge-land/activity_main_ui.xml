@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:showIn="@layout/activity_main_ui"
+    tools:context=".MainActivityUI">
+
+    <fragment android:name="br.com.stormsecurity.mobicine.presentation.fragment.Fragment1"
+        android:id="@+id/headlines_fragment"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment android:name="br.com.stormsecurity.mobicine.presentation.fragment.Fragment2"
+        android:id="@+id/article_fragment"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

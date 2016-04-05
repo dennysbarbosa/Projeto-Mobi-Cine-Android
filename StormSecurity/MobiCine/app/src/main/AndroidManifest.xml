@@ -11,10 +11,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:largeHeap="true"
         android:name="br.com.stormsecurity.mobicine.App">
 
         <activity
             android:name=".activity.SplashScreenUI"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -23,43 +25,39 @@
         </activity>
 
         <activity
-         android:name=".activity.TelaInicialUI"
-         android:label="@string/title_activity_video_player">
-        </activity>
-
-        <activity
         android:name=".activity.EscolhaCategoriaUI"
+            android:screenOrientation="portrait"
         android:label="@string/title_activity_video_player">
         </activity>
 
         <activity
             android:name=".activity.MainActivityUI"
+            android:parentActivityName="br.com.stormsecurity.mobicine.presentation.activity.VideoSelectionActivity"
+            android:screenOrientation="portrait"
             android:configChanges=
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/title_activity_video_player">
+            android:label="@string/title_mobi_cine_player">
         </activity>
         <!-- Configuracoes das bibliotecas -->
 
         <activity
-            android:name=".activity.StartupActivity"
-            android:label="@string/title_activity_video_player">
-        </activity>
-
-        <activity
             android:name=".activity.VideoPlayerActivity"
-            android:label="@string/title_activity_video_player">
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
         </activity>
 
         <activity
             android:name=".activity.VideoSelectionActivity"
+            android:parentActivityName="br.com.stormsecurity.mobicine.presentation.activity.EscolhaCategoriaUI"
+            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_video_player">
+            android:label="@string/title_video_selection_activity">
         </activity>
 
         <activity
             android:name=".activity.FullScreenVideoPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_video_player">
+            android:label="@string/app_name">
         </activity>
 
         <!-- Login Facebook -->
@@ -80,6 +78,10 @@
             android:enabled="true"
             android:exported="false">
         </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f9c85ff00dbaaea3312249a16c3acd6882e9100e" />
 
     </application>
 

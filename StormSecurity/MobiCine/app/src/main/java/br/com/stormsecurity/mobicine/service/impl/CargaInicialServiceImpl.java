@@ -26,6 +26,7 @@ public class CargaInicialServiceImpl extends AbstractServiceImpl implements Carg
         configurarImagensCategorias();
         try {
             salvarCargaPreLiminar(processarCargaPreLiminar(carregarDadosRaw(ui)));
+            AppHelper.getInstance().setListInfUsuario(AppHelper.getInstance().getCargaInicialVO().getListInfUsuario());
         } catch (Exception e) {
             // TODO: handle exception
             ui.mensagem(
@@ -39,7 +40,7 @@ public class CargaInicialServiceImpl extends AbstractServiceImpl implements Carg
     private String carregarDadosRaw(SplashScreenUI ui) {
 
         Resources res = ui.getResources();
-        InputStream inputStream = res.openRawResource(R.raw.carga_inicial1);
+        InputStream inputStream = res.openRawResource(R.raw.carga_inicial);
         return lerTxt(inputStream);
     }
 
@@ -68,6 +69,7 @@ public class CargaInicialServiceImpl extends AbstractServiceImpl implements Carg
                 // insert no banco de dados
                 relacionarImagens(cargaInicialVO);
                 AppHelper.getInstance().setCargaInicialVO(cargaInicialVO);
+
                 sucesso = Boolean.TRUE;
             } catch (Exception e) {
                 // TODO Auto-generated catch block
@@ -103,17 +105,17 @@ public class CargaInicialServiceImpl extends AbstractServiceImpl implements Carg
                 R.drawable.llama,
                 R.drawable.teras,
                 R.drawable.bunny,
-                R.drawable.stevejobs,
+                R.drawable.jobs,
                 R.drawable.android,
                 R.drawable.disneynature,
-                R.drawable.vida_selvagem,
+                R.drawable.outros,
                 R.drawable.vidareligiosa,
                 R.drawable.winter,
-                R.drawable.documentario,
                 R.drawable.gatoentrometido,
                 R.drawable.funnycat,
                 R.drawable.tecnologiabebidas,
-                R.drawable.documentario,
+                R.drawable.mango_open,
+                R.drawable.skate,
 
         };
     }

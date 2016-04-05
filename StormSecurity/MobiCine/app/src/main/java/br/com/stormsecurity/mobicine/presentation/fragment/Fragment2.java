@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.stormsecurity.mobicine.domain.VideoItem;
 import br.com.stormsecurity.mobicine.helper.AppHelper;
 import br.com.stormsecurity.mobicine.presentation.R;
-import br.com.stormsecurity.mobicine.presentation.activity.MainActivityUI;
 import br.com.stormsecurity.mobicine.presentation.activity.VideosRelacionadosAdapter;
 
 
@@ -26,13 +26,12 @@ public class Fragment2 extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private ListView lstViewVideosRelacionados;
     private View rootView;
-
+    private List<VideoItem> listVideosRelacionados;
+    private OnFragmentInteractionListener mListener;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private MainActivityUI mainActivity;
-    private OnFragmentInteractionListener mListener;
-    private List<VideoItem> videoItemList;
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -69,14 +68,17 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        listVideosRelacionados = AppHelper.getInstance().getOpcaoUsuario().getListItensRelacionados();
         rootView = inflater.inflate(R.layout.fragment2, container, false);
         lstViewVideosRelacionados = (ListView) rootView.findViewById(R.id.lstViewVideosRelacionados);
+
         lstViewVideosRelacionados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                AppHelper.getInstance().getVideoItemList().get(position);
-                AppHelper.getInstance().getMainActivityUI().executarVideo(position);
+
+              AppHelper.getInstance().getMainActivityUI().executarVideo(listVideosRelacionados.get(position),listItensRelacionados(listVideosRelacionados.get(position)),position);
+              AppHelper.getInstance().setEventoVideosRelacionados(true);
             }
         });
 
@@ -121,7 +123,7 @@ public class Fragment2 extends Fragment {
 
     public void montarAdpter(){
 
-        VideosRelacionadosAdapter adapter1 = new VideosRelacionadosAdapter(AppHelper.getInstance().getMainActivityUI(), AppHelper.getInstance().getOpcaoUsuario().getListItensRelacionados());
+        VideosRelacionadosAdapter adapter1 = new VideosRelacionadosAdapter(AppHelper.getInstance().getMainActivityUI(), listVideosRelacionados);
         lstViewVideosRelacionados.setAdapter(adapter1);
     }
 
@@ -129,5 +131,16 @@ public class Fragment2 extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+    }
+
+    private List<VideoItem> listItensRelacionados(VideoItem item){
+
+        List<VideoItem> listItensRelacionados = new ArrayList<>();
+        for(VideoItem videoItem : AppHelper.getInstance().getCargaInicialVO().getListVideoItens()){
+            if(videoItem.getId() == item.getId()){
+                listItensRelacionados.add(videoItem);
+            }
+        }
+        return listItensRelacionados;
     }
 }

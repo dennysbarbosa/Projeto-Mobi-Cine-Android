@@ -21,10 +21,9 @@
 
     <!-- string da blibioteca -->
 
-    <string name="title_activity_video_player">ExoMedia Video Player</string>
-    <string name="title_activity_audio_player">ExoMedia Audio Player</string>
-    <string name="title_audio_selection_activity">Audio selection</string>
-    <string name="title_video_selection_activity">Seleção de Video</string>
+    <string name="title_activity_video_player">INFORME A CATEGORIA</string>
+    <string name="title_mobi_cine_player">MOBI CINE ANDROID</string>
+    <string name="title_video_selection_activity">SELEÇÃO DE VIDEO</string>
 
     <!-- redes sociais ids-->
 

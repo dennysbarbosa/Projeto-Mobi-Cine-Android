@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/buscarVideo"
+        android:actionBarSize="50dp"
+        android:showAsAction="always"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:icon="@mipmap/lupa1"
+        android:title=""/>
+    <item
+        android:id="@+id/sair"
+        android:actionBarSize="50dp"
+        android:showAsAction="always"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:title="Sair"/>
+
+</menu>

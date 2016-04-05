@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\layout-v16\\exomedia_big_notification_content.xml",
         "source": "C:\\Ferramentas\\MyProject\\StormSecurity\\MobiCine\\library\\src\\main\\res\\layout-v16\\exomedia_big_notification_content.xml"
+    },
+    {
+        "merged": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\build\\intermediates\\res\\merged\\debug\\layout-v16\\exomedia_big_notification_content.xml",
+        "source": "C:\\Ferramentas\\MyWorkSpace\\StormSecurity\\MobiCine\\library\\src\\main\\res\\layout-v16\\exomedia_big_notification_content.xml"
     }
 ]
